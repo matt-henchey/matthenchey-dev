@@ -1,0 +1,18 @@
+:root {
+    --bg-light: #f0fdf4;
+    --bg-dark: #0C0C0C;
+    --text-light: #050D09;
+    --text-dark: #0C0C0C;
+  }
+  
+  /* Apply variables directly in dark mode */
+  .dark {
+    --bg: var(--bg-dark);
+    --text: var(--text-dark);
+  }
+  
+  /* Light mode defaults */
+  :root {
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+  }
