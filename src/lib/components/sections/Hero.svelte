@@ -1,26 +1,52 @@
 <script lang="ts">
 	import type { HeroSectionProps } from '$lib/types';
-	import { heroData } from '$lib/data/hero';
+	import { quotes } from '$lib/data/hero';
 
 	export let isVisible: boolean;
+	let currentQuoteIndex = Math.floor(Math.random() * quotes.length);
+	$: currentQuote = quotes[currentQuoteIndex];
+
+	function cycleQuote() {
+		currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+	}
 </script>
 
 <section class="h-screen flex items-center justify-center">
 	<div
-		class="max-w-6xl mx-auto px-6 text-center opacity-0 transition-all duration-1000 delay-300"
+		class="max-w-5xl mx-auto px-6 text-center opacity-0 transition-all duration-1000 delay-200"
 		class:opacity-100={isVisible}
 	>
-		<h1
-			class="text-3xl font-bold mb-1 bg-gradient-to-r from-yellow-300 to-green-300 text-transparent bg-clip-text pb-2"
+		<div class="h-48 mb-6 flex flex-col justify-center">
+			<h1
+				class="text-3xl
+				font-bold
+				mb-1
+				bg-gradient-to-r from-orange-600 to-orange-900
+				dark:bg-gradient-to-r dark:from-orange-600 dark:to-orange-100
+				text-transparent bg-clip-text pb-2 transition-all duration-1000"
+			>
+				{currentQuote.quote}
+			</h1>
+			<h2
+				class="text-md font-light mb-6 text-orange-900 dark:text-orange-200 italic transition-all duration-1000"
+			>
+				{currentQuote.author}
+			</h2>
+		</div>
+
+		<button
+			class="text-sm
+			bg-gradient-to-r from-orange-600 to-orange-900
+			dark:bg-gradient-to-r dark:from-orange-600 dark:to-orange-100
+			bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300 px-4 py-2 rounded-full border
+			border-orange-600/50
+			hover:border-orange-600/50
+			mb-12"
+			on:click={cycleQuote}
+			aria-label="Cycle Wisdom"
 		>
-			{heroData.quote}
-		</h1>
-		<h2 class="text-lg font-light opacity-60 mb-12">
-			{heroData.author}
-		</h2>
-		<p class="text-lg font-light opacity-60 mb-6">
-			{heroData.subtitle}
-		</p>
+			↻
+		</button>
 
 		<!-- Bouncing Arrows -->
 		<div class="flex flex-col items-center gap-0.1">

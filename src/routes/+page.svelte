@@ -7,6 +7,7 @@
 	import Splash from '$lib/components/ui/Splash.svelte';
 	import ThemeToggle from '$lib/components/ui/ThemeToggle.svelte';
 	import ExitButton from '$lib/components/ui/ExitButton.svelte';
+	import ContactBox from '$lib/components/ui/ContactBox.svelte';
 
 	// Layout Components
 	import Navigation from '$lib/components/layout/Navigation.svelte';
@@ -23,6 +24,7 @@
 	let isTransitioning = false;
 	let showContent = false;
 	let mounted = false;
+	let isContactBoxVisible = false;
 
 	onMount(() => {
 		console.log('onMount called');
@@ -70,6 +72,14 @@
 		}, 1000);
 	}
 
+	function toggleContactBox() {
+		isContactBoxVisible = !isContactBoxVisible;
+	}
+
+	function closeContactBox() {
+		isContactBoxVisible = false;
+	}
+
 	$: if (browser) {
 		console.log('State changed:', { isFirstLoad, isTransitioning, showContent, mounted });
 		document.body.className = $theme;
@@ -97,7 +107,8 @@
   transition-all duration-1000
   {isTransitioning ? 'opacity-0 blur-lg' : 'opacity-100 blur-0'}"
 		>
-			<Navigation isVisible={showContent} />
+			<Navigation isVisible={showContent} onToggleContactBox={toggleContactBox} />
+
 			<ThemeToggle />
 			<ExitButton onExit={handleExit} />
 
@@ -111,6 +122,17 @@
 			<Footer />
 		</div>
 	{/if}
+{/if}
+
+{#if isContactBoxVisible}
+	<div
+		class="fixed inset-0 bg-black/50 z-50 transition-all duration-1000"
+		class:opacity-0={!isContactBoxVisible}
+		class:opacity-100={isContactBoxVisible}
+		class:pointer-events-none={!isContactBoxVisible}
+	>
+		<ContactBox isVisible={isContactBoxVisible} onClose={closeContactBox} />
+	</div>
 {/if}
 
 <style>
