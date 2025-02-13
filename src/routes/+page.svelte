@@ -16,6 +16,7 @@
 	import About from '$lib/components/sections/About.svelte';
 	import Experience from '$lib/components/sections/Experience.svelte';
 	import Education from '$lib/components/sections/Education.svelte';
+	import Footer from '$lib/components/layout/Footer.svelte';
 
 	// State management
 	let isFirstLoad = true;
@@ -106,6 +107,8 @@
 				<Experience isVisible={!isTransitioning} />
 				<Education isVisible={!isTransitioning} />
 			</main>
+
+			<Footer />
 		</div>
 	{/if}
 {/if}
