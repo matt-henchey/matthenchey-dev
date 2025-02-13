@@ -3,7 +3,7 @@
 
 	const socialLinks = {
 		github: 'https://github.com/matt-henchey',
-		linkedin: 'https://linkedin.com/in/matt-henchey'
+		linkedin: 'https://www.linkedin.com/in/matthewhenchey/'
 	};
 </script>
 
@@ -16,6 +16,7 @@
 				href={socialLinks.github}
 				target="_blank"
 				rel="noopener noreferrer"
+				aria-label="GitHub Profile"
 				class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
 			>
 				<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -32,6 +33,7 @@
 				href={socialLinks.linkedin}
 				target="_blank"
 				rel="noopener noreferrer"
+				aria-label="LinkedIn Profile"
 				class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
 			>
 				<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
