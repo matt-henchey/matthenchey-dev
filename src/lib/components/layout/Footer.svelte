@@ -3,7 +3,7 @@
 
 	const socialLinks = {
 		github: 'https://github.com/matt-henchey',
-		linkedin: 'https://www.linkedin.com/in/matthewhenchey/'
+		linkedin: 'https://www.linkedin.com/in/matt-henchey/'
 	};
 </script>
 
