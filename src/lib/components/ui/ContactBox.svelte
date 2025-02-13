@@ -38,9 +38,15 @@
 			if (response.ok) {
 				localStorage.removeItem('contactDraft');
 				email = subject = message = '';
+				alert('Message sent successfully!');
+				onClose();
+			} else {
+				const errorData = await response.json();
+				alert('Failed to send message: ' + errorData.error);
 			}
 		} catch (error) {
 			console.error('Error sending message:', error);
+			alert('An error occurred while sending the message.');
 		}
 	}
 
