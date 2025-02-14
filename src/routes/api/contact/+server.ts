@@ -1,17 +1,21 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { json } from '@sveltejs/kit';
-import { sesClient, validateAwsCredentials } from '$lib/aws-config';
 import { error } from '@sveltejs/kit';
 
-export const POST = async ({ request }) => {
+export const POST = async ({ request, platform }) => {
+    if (!platform) throw new Error('Platform context not available');
+    const sesClient = new SESClient({
+        region: 'us-east-1',
+        credentials: {
+            accessKeyId: platform.env.AWS_ACCESS_KEY_ID,
+            secretAccessKey: platform.env.AWS_SECRET_ACCESS_KEY,
+        },
+    });
     try {
         const { email, subject, message } = await request.json();
 
         // Log incoming data (sanitized)
         console.log('Received request:', { email: '***', subject, message: '***' });
-
-        validateAwsCredentials();
-        console.log('AWS credentials validated');
 
         const params = {
             Destination: {
