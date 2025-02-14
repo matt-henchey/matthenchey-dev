@@ -1,6 +1,6 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { json } from '@sveltejs/kit';
-import { sesClient } from '$lib/aws-config';
+import { sesClient, validateAwsCredentials } from '$lib/aws-config';
 
 export const POST = async ({ request }) => {
     const { name, email, message } = await request.json();
@@ -19,6 +19,7 @@ export const POST = async ({ request }) => {
     };
 
     try {
+        validateAwsCredentials();
         const command = new SendEmailCommand(params);
         await sesClient.send(command);
         return json({ success: true });
