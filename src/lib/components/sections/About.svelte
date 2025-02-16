@@ -10,7 +10,7 @@
 	export let isVisible: boolean;
 </script>
 
-<section id="about" class="py-20 px-4 md:py-40 md:px-6">
+<section id="about" class="pt-32 pb-20 px-4 py-20 md:py-40 md:px-6">
 	<div
 		class="max-w-4xl mx-auto opacity-0 transition-all duration-300 delay-100"
 		class:opacity-100={isVisible}
