@@ -3,7 +3,7 @@ import type { ExperienceEntry } from '$lib/types';
 export const experiences: ExperienceEntry[] = [
     {
         title: "Software Engineer II",
-        company: "Shopmonkey",
+        company: "shopmonkey.io",
         companyUrl: "https://www.shopmonkey.io/",
         period: "2023 - Present",
         responsibilities: [
@@ -16,7 +16,7 @@ export const experiences: ExperienceEntry[] = [
     },
     {
         title: "Data Migration Technical Lead",
-        company: "Daxko",
+        company: "daxko.com",
         companyUrl: "https://www.daxko.com/",
         period: "2022 - 2023",
         responsibilities: [
@@ -29,7 +29,7 @@ export const experiences: ExperienceEntry[] = [
     },
     {
         title: "Data Migration Engineer",
-        company: "Daxko",
+        company: "daxko.com",
         companyUrl: "https://www.daxko.com/",
         period: "2020 - 2022",
         responsibilities: [
@@ -41,7 +41,7 @@ export const experiences: ExperienceEntry[] = [
     },
     {
         title: "Data Migration Engineer",
-        company: "Mindbody",
+        company: "mindbodyonline.com",
         companyUrl: "https://www.mindbodyonline.com/",
         period: "2014 - 2020",
         responsibilities: [

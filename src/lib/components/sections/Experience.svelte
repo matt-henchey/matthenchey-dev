@@ -5,43 +5,46 @@
 	export let isVisible: boolean;
 </script>
 
-<section id="work" class="py-20 px-6">
+<section id="experience" class="py-12 md:py-20 px-4 md:px-6">
 	<div
 		class="max-w-4xl mx-auto opacity-0 transition-all duration-1000 delay-400"
 		class:opacity-100={isVisible}
 	>
+		<!-- Header -->
 		<h2
-			class="text-5xl font-bold mb-8 bg-gradient-to-r from-green-500 to-green-900 bg-clip-text text-transparent"
+			class="text-3xl md:text-5xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-green-500 to-green-900 bg-clip-text text-transparent"
 		>
 			> experience
 		</h2>
-		<div class="space-y-12">
+		<!-- Experience Section -->
+		<div class="space-y-8 md:space-y-12">
 			{#each experiences as experience}
 				<div
-					class="border-l-2 pl-6 {experience.isHighlighted
-						? 'border-green-600'
-						: 'border-green-600 border-opacity-20'}"
+					class="border-l-2 pl-4 md:pl-6
+					{experience.isHighlighted ? 'border-green-600' : 'border-green-600 border-opacity-20'}"
 				>
-					<div class="flex items-center gap-2">
+					<div class="flex flex-col md:flex-row md:items-center gap-2">
 						<h2
-							class="text-2xl font-semibold text-green-600 bg-gradient-to-r from-green-700 to-green-900 bg-clip-text text-transparent"
+							class="text-xl md:text-2xl font-semibold
+						           bg-gradient-to-r from-green-700 to-green-900
+						           bg-clip-text text-transparent"
 						>
 							{experience.title}
 						</h2>
-						<p class="text-md opacity-80 mb-2 text-gray-400">=></p>
+						<h2 class="text-2xl text-green-900">=></h2>
 						<a
 							href={experience.companyUrl}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="hover:text-teal-500 transition-colors duration-200 mb-2 text-green-300 outline outline-1 outline-green-900 rounded-md p-1 min-w-[150px] inline-block text-center"
+							class="hover:text-green-500 transition-colors duration-200 border border-green-800 dark:border-green-500 rounded-md p-1 text-sm md:text-base min-w-[200px] inline-block text-center"
 						>
 							{experience.company}
 						</a>
 					</div>
-					<p class="text-lg opacity-80 mb-2">{experience.period}</p>
-					<ul class="list-disc list-inside space-y-2 opacity-90">
+					<p class="text-base md:text-lg opacity-80 mb-2">{experience.period}</p>
+					<ul class="list-disc list-inside space-y-2 opacity-90 text-sm md:text-base pl-2 md:pl-4">
 						{#each experience.responsibilities as responsibility}
-							<li>{responsibility}</li>
+							<li class="leading-relaxed">{responsibility}</li>
 						{/each}
 					</ul>
 				</div>

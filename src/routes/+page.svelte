@@ -94,13 +94,13 @@
 		class="min-h-screen
   bg-[#F5F5F5] dark:bg-[#111111]
   text-[#111111] dark:text-[#F5F5F5]
-  transition-all duration-1000
+  transition-all duration-300
   {isTransitioning ? 'opacity-0 blur-lg' : 'opacity-100 blur-0'}"
 	>
 		<ThemeToggle />
-		<Banner isVisible={!isTransitioning} onToggleContactBox={toggleContactBox} />
+		<Banner isVisible={!isTransitioning} />
 		<main>
-			<About isVisible={!isTransitioning} />
+			<About isVisible={!isTransitioning} onToggleContactBox={toggleContactBox} />
 			<Experience isVisible={!isTransitioning} />
 			<Education isVisible={!isTransitioning} />
 		</main>
@@ -111,7 +111,7 @@
 
 {#if isContactBoxVisible}
 	<div
-		class="fixed inset-0 bg-black/50 z-50 transition-all duration-1000"
+		class="fixed inset-0 bg-black/50 z-50 transition-all duration-300"
 		class:opacity-0={!isContactBoxVisible}
 		class:opacity-100={isContactBoxVisible}
 		class:pointer-events-none={!isContactBoxVisible}
