@@ -63,14 +63,16 @@
 
 {#if isVisible}
 	<div
-		class="fixed inset-0 bg-[#111111]/30 z-50 flex items-center justify-center transition-all duration-2000"
+		class="fixed inset-0 bg-[#111111]/30 z-50 flex items-center justify-center transition-all duration-300"
 		role="dialog"
 		aria-modal="true"
 		aria-label="Contact Form"
 	>
-		<div class="dark:bg-[#171717] bg-orange-200 p-6 rounded-3xl shadow-lg max-w-md w-full mx-4">
+		<div
+			class="dark:bg-[#171717] bg-green-200 p-6 rounded-3xl shadow-lg max-w-md w-full mx-4 border border-4 border-black"
+		>
 			<h2
-				class="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-100"
+				class="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-100"
 			>
 				> contact
 			</h2>
@@ -86,20 +88,23 @@
                         block
                         w-full
                         border
+						border-1
+						hover:border-2
                         border-black
                         rounded-sm
-                        shadow-lg
-
-                        bg-orange-300
+                        hover:shadow-lg
+                        shadow-sm
+						p-2
+                        bg-green-300
                         dark:bg-[#1F1F1F]
 
                         text-gray-600
-                        dark:text-orange-900
+                        dark:text-green-900
 
-                        focus:text-orange-900
-                        dark:focus:text-orange-200
+                        focus:text-green-900
+                        dark:focus:text-green-200
 
-                        focus:bg-orange-400
+                        focus:bg-green-400
                         dark:focus:bg-[#0D0D0D]
 
                         focus:outline-none
@@ -115,8 +120,8 @@
                         dark:focus:ring-gray-900
 
                         sm:text-sm
-                        transition-all
-                        duration-1000"
+                        transition-color
+                        duration-300"
 					/>
 				</div>
 				<div class="mb-4">
@@ -130,20 +135,23 @@
                         block
                         w-full
                         border
+						border-1
+						hover:border-2
                         border-black
                         rounded-sm
+                        hover:shadow-lg
                         shadow-sm
-
-                        bg-orange-300
+						p-2
+                        bg-green-300
                         dark:bg-[#1F1F1F]
 
                         text-gray-600
-                        dark:text-orange-900
+                        dark:text-green-900
 
-                        focus:text-orange-900
-                        dark:focus:text-orange-200
+                        focus:text-green-900
+                        dark:focus:text-green-200
 
-                        focus:bg-orange-400
+                        focus:bg-green-400
                         dark:focus:bg-[#0D0D0D]
 
                         focus:outline-none
@@ -159,8 +167,8 @@
                         dark:focus:ring-gray-900
 
                         sm:text-sm
-                        transition-all
-                        duration-1000"
+                        transition-color
+                        duration-300"
 					/>
 				</div>
 				<div class="mb-4">
@@ -173,20 +181,23 @@
                         block
                         w-full
                         border
+						border-1
+						hover:border-2
                         border-black
                         rounded-sm
+                        hover:shadow-lg
                         shadow-sm
-
-                        bg-orange-300
+						p-2
+                        bg-green-300
                         dark:bg-[#1F1F1F]
 
                         text-gray-600
-                        dark:text-orange-900
+                        dark:text-green-900
 
-                        focus:text-orange-900
-                        dark:focus:text-orange-200
+                        focus:text-green-900
+                        dark:focus:text-green-200
 
-                        focus:bg-orange-400
+                        focus:bg-green-400
                         dark:focus:bg-[#0D0D0D]
 
                         focus:outline-none
@@ -202,9 +213,8 @@
                         dark:focus:ring-gray-900
 
                         sm:text-sm
-                        transition-all
-                        duration-1000
-                        resize-y"
+                        transition-color
+                        duration-300"
 						rows="4"
 					></textarea>
 				</div>
@@ -212,13 +222,13 @@
 					<button
 						type="button"
 						on:click={handleCancel}
-						class="mr-2 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-[#1F1F1F] bg-orange-600 hover:bg-orange-700 focus:outline-1 focus:ring-1 focus:ring-[#1F1F1F]"
+						class="mr-2 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-[#1F1F1F] bg-gray-600 hover:bg-gray-700 border border-gray-900 focus:outline-1 focus:ring-1 focus:ring-[#1F1F1F]"
 					>
 						Cancel
 					</button>
 					<button
 						type="submit"
-						class="mr-2 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-[#1F1F1F] bg-orange-600 hover:bg-orange-700 focus:outline-1 focus:ring-1 focus:ring-[#1F1F1F]"
+						class="mr-2 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-[#1F1F1F] bg-green-600 hover:bg-green-700 focus:outline-1 focus:ring-1 focus:ring-[#1F1F1F]"
 					>
 						Send
 					</button>
