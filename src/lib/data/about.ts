@@ -1,6 +1,6 @@
 export const aboutData = {
     description: [
-        "Over 10 years of hands-on experience with SQL and its many variations (T-SQL, MySQL, Postgres, Mongo). Part of this experience (~4-5 years) included writing software (C#, PHP) to enhance internal ETL processes. Recently, I have been focusing on back-end software development (Golang) and dabbling in front-end software development (Typescript, Svelte, React).",
+        "With over 10 years of engineering experience, I've established myself as a back-end software developer specializing in system architecture and data processing. My current focus is on building robust back-end systems using Golang, while also exploring front-end development with modern frameworks like Typescript, Svelte, and React.",
         "My journey from traditional photography to software engineering reflects my passion for mastering complex processes and pushing technical boundaries. This same drive that led me to explore 18th-century photographic techniques now fuels my approach to software development – embracing challenges, thinking creatively, and continuously expanding my technical expertise.",
         "My colleagues describe me as a natural self-starter who is hungry to learn as much as possible. Through dedication, long hours, and the generous mentorship of my peers, I've rapidly evolved from writing one-off tools to developing production-ready applications, demonstrating my commitment to continuous learning and professional growth."
     ],
