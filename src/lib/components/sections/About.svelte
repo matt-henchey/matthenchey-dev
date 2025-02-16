@@ -14,20 +14,28 @@
 		class="max-w-4xl mx-auto opacity-0 transition-all duration-1000 delay-400"
 		class:opacity-100={isVisible}
 	>
-		<div class="flex justify-center mb-12">
-			<img src="/images/self.png" alt="Matt Henchey" class="rounded w-64 h-64 object-cover" />
+		<div class="flex justify-left mb-12">
+			<img src="/images/self.png" alt="Matt Henchey" class="rounded-full w-64 h-64 object-cover" />
 		</div>
 
-		<h2
-			class="text-6xl font-bold mb-8 bg-gradient-to-r from-orange-600 to-white bg-clip-text text-transparent"
-		>
-			> introduction
-		</h2>
 		<div class="space-y-8">
 			<div class="text-lg space-y-4">
-				<h1 class="text-2xl font-semibold mb-4 text-orange-200">
-					Matt Henchey => Software Engineer
+				<div class="flex gap-4 mb-1">
+					<h2 class="text-xl font-semibold mb-4 text-green-500">Matt Henchey</h2>
+					<h2 class="text-xl font-semibold mb-4 text-green-900">=></h2>
+					<h2 class="text-xl font-semibold mb-4 text-green-500">Software Engineer</h2>
+				</div>
+			</div>
+
+			<div class="flex gap-4 mb-2">
+				<h1
+					class="text-5xl font-bold mb-4 bg-gradient-to-r from-green-500 to-green-900 bg-clip-text text-transparent"
+				>
+					> introduction
 				</h1>
+			</div>
+
+			<div class="text-lg space-y-4">
 				{#each aboutData.description as paragraph, i}
 					{#if i === 0}
 						<p class="opacity-90">{paragraph}</p>
@@ -42,20 +50,14 @@
 			<!-- Engineering Skills -->
 			<div>
 				<h3
-					class="text-3xl font-bold mb-6
-					bg-gradient-to-r from-orange-600 to-white
+					class="text-4xl font-semibold mb-6
+					bg-gradient-to-r from-green-700 to-green-900
 					bg-clip-text text-transparent"
 				>
 					engineering
 				</h3>
 				<div class="grid md:grid-cols-3 gap-8">
 					<div>
-						<h4
-							class="text-md font-bold mb-3 border-b border-orange-600 text-orange-600
-						pb-1"
-						>
-							backend
-						</h4>
 						<ul class="space-y-2 opacity-90">
 							{#each engineering.backend as skill}
 								<li>{skill}</li>
@@ -63,12 +65,6 @@
 						</ul>
 					</div>
 					<div>
-						<h4
-							class="text-md font-bold mb-3 border-b border-orange-600 text-orange-600
-						pb-1"
-						>
-							data
-						</h4>
 						<ul class="space-y-2 opacity-90">
 							{#each engineering.data as skill}
 								<li>{skill}</li>
@@ -76,12 +72,6 @@
 						</ul>
 					</div>
 					<div>
-						<h4
-							class="text-md font-bold mb-3 border-b border-orange-600 text-orange-600
-						pb-1"
-						>
-							cloud
-						</h4>
 						<ul class="space-y-2 opacity-90">
 							{#each engineering.cloud as skill}
 								<li>{skill}</li>
@@ -94,20 +84,14 @@
 			<!-- Leadership Skills -->
 			<div>
 				<h3
-					class="text-3xl font-bold mb-6
-					bg-gradient-to-r from-orange-600 to-white
+					class="text-4xl font-semibold mb-6
+					bg-gradient-to-r from-green-700 to-green-900
 					bg-clip-text text-transparent"
 				>
 					leadership
 				</h3>
 				<div class="grid md:grid-cols-2 gap-8">
 					<div>
-						<h4
-							class="text-md font-bold mb-3 border-b border-orange-600 text-orange-600
-						pb-1"
-						>
-							technical
-						</h4>
 						<ul class="space-y-2 opacity-90">
 							{#each leadership.technical as skill}
 								<li>{skill}</li>
@@ -115,12 +99,6 @@
 						</ul>
 					</div>
 					<div>
-						<h4
-							class="text-md font-bold mb-3 border-b border-orange-600 text-orange-600
-						pb-1"
-						>
-							management
-						</h4>
 						<ul class="space-y-2 opacity-90">
 							{#each leadership.management as skill}
 								<li>{skill}</li>
@@ -133,8 +111,8 @@
 			<!-- Technologies -->
 			<div class="mt-12">
 				<h3
-					class="text-3xl font-bold mb-6
-					bg-gradient-to-r from-orange-600 to-white
+					class="text-4xl font-semibold mb-6
+					bg-gradient-to-r from-green-700 to-green-900
 					bg-clip-text text-transparent"
 				>
 					technologies
@@ -143,12 +121,6 @@
 				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 					<!-- Databases -->
 					<div>
-						<h4
-							class="text-md font-bold mb-3 border-b border-orange-600 text-orange-600
-						pb-1"
-						>
-							databases
-						</h4>
 						<ul class="space-y-2">
 							{#each technologies.databases as tech}
 								<li>{tech}</li>
@@ -158,12 +130,6 @@
 
 					<!-- Languages -->
 					<div>
-						<h4
-							class="text-md font-bold mb-3 border-b border-orange-600 text-orange-600
-						pb-1"
-						>
-							languages
-						</h4>
 						<ul class="space-y-2">
 							{#each technologies.languages as tech}
 								<li>{tech}</li>
@@ -173,12 +139,6 @@
 
 					<!-- Frameworks -->
 					<div>
-						<h4
-							class="text-md font-bold mb-3 border-b border-orange-600 text-orange-600
-						pb-1"
-						>
-							frameworks
-						</h4>
 						<ul class="space-y-2">
 							{#each technologies.frameworks as tech}
 								<li>{tech}</li>
@@ -188,12 +148,6 @@
 
 					<!-- Infrastructure -->
 					<div>
-						<h4
-							class="text-md font-bold mb-3 border-b border-orange-600 text-orange-600
-						pb-1"
-						>
-							infrastructure
-						</h4>
 						<ul class="space-y-2">
 							{#each technologies.infrastructure as tech}
 								<li>{tech}</li>

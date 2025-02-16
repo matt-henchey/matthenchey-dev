@@ -11,7 +11,7 @@
 		class:opacity-100={isVisible}
 	>
 		<h2
-			class="text-6xl font-bold mb-8 bg-gradient-to-r from-orange-600 to-white bg-clip-text text-transparent"
+			class="text-5xl font-bold mb-8 bg-gradient-to-r from-green-500 to-green-900 bg-clip-text text-transparent"
 		>
 			> experience
 		</h2>
@@ -19,11 +19,26 @@
 			{#each experiences as experience}
 				<div
 					class="border-l-2 pl-6 {experience.isHighlighted
-						? 'border-orange-600'
-						: 'border-orange-600 border-opacity-20'}"
+						? 'border-green-600'
+						: 'border-green-600 border-opacity-20'}"
 				>
-					<h3 class="text-2xl font-semibold text-orange-600">{experience.title}</h3>
-					<p class="text-lg opacity-80 mb-2">{experience.company} • {experience.period}</p>
+					<div class="flex items-center gap-2">
+						<h2
+							class="text-2xl font-semibold text-green-600 bg-gradient-to-r from-green-700 to-green-900 bg-clip-text text-transparent"
+						>
+							{experience.title}
+						</h2>
+						<p class="text-md opacity-80 mb-2 text-gray-400">=></p>
+						<a
+							href={experience.companyUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="hover:text-teal-500 transition-colors duration-200 mb-2 text-green-300 outline outline-1 outline-green-900 rounded-md p-1 min-w-[150px] inline-block text-center"
+						>
+							{experience.company}
+						</a>
+					</div>
+					<p class="text-lg opacity-80 mb-2">{experience.period}</p>
 					<ul class="list-disc list-inside space-y-2 opacity-90">
 						{#each experience.responsibilities as responsibility}
 							<li>{responsibility}</li>

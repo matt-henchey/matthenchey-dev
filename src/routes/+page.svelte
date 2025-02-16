@@ -4,16 +4,11 @@
 	import { theme } from '$lib/stores/theme';
 
 	// UI Components
-	import Splash from '$lib/components/ui/Splash.svelte';
 	import ThemeToggle from '$lib/components/ui/ThemeToggle.svelte';
-	import ExitButton from '$lib/components/ui/ExitButton.svelte';
 	import ContactBox from '$lib/components/ui/ContactBox.svelte';
 
-	// Layout Components
-	import Navigation from '$lib/components/layout/Navigation.svelte';
-
 	// Section Components
-	import Hero from '$lib/components/sections/Hero.svelte';
+	import Banner from '$lib/components/sections/Banner.svelte';
 	import About from '$lib/components/sections/About.svelte';
 	import Experience from '$lib/components/sections/Experience.svelte';
 	import Education from '$lib/components/sections/Education.svelte';
@@ -95,33 +90,23 @@
 </svelte:head>
 
 {#if mounted}
-	{#if !showContent}
-		<div class="fixed inset-0 bg-white dark:bg-[#111111] z-50">
-			<Splash {isFirstLoad} {isTransitioning} onEnter={handleEnter} />
-		</div>
-	{:else}
-		<div
-			class="min-h-screen
+	<div
+		class="min-h-screen
   bg-[#F5F5F5] dark:bg-[#111111]
   text-[#111111] dark:text-[#F5F5F5]
   transition-all duration-1000
   {isTransitioning ? 'opacity-0 blur-lg' : 'opacity-100 blur-0'}"
-		>
-			<Navigation isVisible={showContent} onToggleContactBox={toggleContactBox} />
+	>
+		<ThemeToggle />
+		<Banner isVisible={!isTransitioning} onToggleContactBox={toggleContactBox} />
+		<main>
+			<About isVisible={!isTransitioning} />
+			<Experience isVisible={!isTransitioning} />
+			<Education isVisible={!isTransitioning} />
+		</main>
 
-			<ThemeToggle />
-			<ExitButton onExit={handleExit} />
-
-			<main>
-				<Hero isVisible={!isTransitioning} />
-				<About isVisible={!isTransitioning} />
-				<Experience isVisible={!isTransitioning} />
-				<Education isVisible={!isTransitioning} />
-			</main>
-
-			<Footer />
-		</div>
-	{/if}
+		<Footer />
+	</div>
 {/if}
 
 {#if isContactBoxVisible}

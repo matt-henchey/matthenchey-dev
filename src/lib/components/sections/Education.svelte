@@ -11,13 +11,17 @@
 		class:opacity-100={isVisible}
 	>
 		<h2
-			class="text-6xl font-bold mb-8 bg-gradient-to-r from-orange-600 to-white bg-clip-text text-transparent"
+			class="text-5xl font-bold mb-8 bg-gradient-to-r from-green-500 to-green-900 bg-clip-text text-transparent"
 		>
 			> education
 		</h2>
 		{#each education as entry}
-			<div class="border-l-2 pl-6 border-orange-600 border-opacity-20">
-				<h3 class="text-2xl font-semibold text-orange-600">{entry.degree}</h3>
+			<div class="border-l-2 pl-6 border-green-600 border-opacity-20">
+				<h3
+					class="text-2xl font-semibold bg-gradient-to-r from-green-700 to-green-900 bg-clip-text text-transparent"
+				>
+					{entry.degree}
+				</h3>
 				<p class="text-lg opacity-80 mb-2">{entry.school} • {entry.period}</p>
 				<p class="text-lg opacity-90">{entry.description}</p>
 			</div>

@@ -21,6 +21,7 @@ export interface ExitButtonProps {
 export interface ExperienceEntry {
     title: string;
     company: string;
+    companyUrl: string;
     period: string;
     responsibilities: string[];
     isHighlighted?: boolean;

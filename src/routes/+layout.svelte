@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-	import '$lib/styles/reset.css';
 </script>
 
 <div
