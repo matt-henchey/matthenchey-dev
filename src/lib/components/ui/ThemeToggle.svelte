@@ -4,7 +4,7 @@
 
 <button
 	on:click={toggleTheme}
-	class="fixed top-4 right-4 p-2 rounded-full transition-all duration-300 hover:scale-110 hover:rotate-12 hover:bg-gray-200 dark:hover:bg-stone-800 z-50"
+	class="p-4 rounded-full transition-all duration-300 hover:scale-110 hover:rotate-12 bg-transparent text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-200"
 	aria-label="Toggle theme"
 >
 	{#if $theme === 'dark'}
@@ -23,6 +23,7 @@
 			/>
 		</svg>
 	{:else}
+		<!-- Lightmode Icon -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			class="w-5 h-5 transition-transform duration-300"

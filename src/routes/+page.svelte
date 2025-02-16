@@ -8,7 +8,7 @@
 	import ContactBox from '$lib/components/ui/ContactBox.svelte';
 
 	// Section Components
-	import Banner from '$lib/components/sections/Banner.svelte';
+	import Header from '$lib/components/layout/Header.svelte';
 	import About from '$lib/components/sections/About.svelte';
 	import Experience from '$lib/components/sections/Experience.svelte';
 	import Education from '$lib/components/sections/Education.svelte';
@@ -97,8 +97,9 @@
   transition-all duration-300
   {isTransitioning ? 'opacity-0 blur-lg' : 'opacity-100 blur-0'}"
 	>
-		<ThemeToggle />
-		<Banner isVisible={!isTransitioning} />
+		<Header isVisible={true}>
+			<ThemeToggle slot="theme-toggle" />
+		</Header>
 		<main>
 			<About isVisible={!isTransitioning} onToggleContactBox={toggleContactBox} />
 			<Experience isVisible={!isTransitioning} />
@@ -123,6 +124,12 @@
 <style>
 	:global(html) {
 		scroll-behavior: smooth;
+		background-color: #f5f5f5;
+	}
+
+	:global(html),
+	:global(body.dark) {
+		background-color: #111111;
 	}
 
 	:global(body) {
