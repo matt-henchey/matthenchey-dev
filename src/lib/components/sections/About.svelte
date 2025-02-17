@@ -1,16 +1,13 @@
 <script lang="ts">
 	import type { AboutSectionProps } from '$lib/types';
 	import { aboutData } from '$lib/data/about';
-	const {
-		description,
-		skills: { engineering, leadership, technologies }
-	} = aboutData;
+	const { description } = aboutData;
 
 	export let onToggleContactBox: () => void;
 	export let isVisible: boolean;
 </script>
 
-<section id="about" class="pt-32 pb-20 px-4 py-20 md:py-40 md:px-6">
+<section id="about" class="pt-16 pb-10 px-4 md:px-6">
 	<div
 		class="max-w-4xl mx-auto opacity-0 transition-all duration-300 delay-100"
 		class:opacity-100={isVisible}
@@ -70,147 +67,6 @@
 			{#each aboutData.description as paragraph}
 				<p>{paragraph}</p>
 			{/each}
-		</div>
-
-		<!-- Skills Section -->
-		<!-- Engineering Skills -->
-		<div>
-			<h3
-				class="text-3xl md:text-4xl font-semibold mt-8 md:mt-16 mb-2 pb-2 bg-gradient-to-r from-green-700 to-green-900 bg-clip-text text-transparent"
-			>
-				engineering
-			</h3>
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-				<div>
-					<ul class="space-y-2 opacity-90">
-						{#each engineering.backend as skill}
-							<li>{skill}</li>
-						{/each}
-					</ul>
-				</div>
-				<div>
-					<ul class="space-y-2 opacity-90">
-						{#each engineering.data as skill}
-							<li>{skill}</li>
-						{/each}
-					</ul>
-				</div>
-				<div>
-					<ul class="space-y-2 opacity-90">
-						{#each engineering.cloud as skill}
-							<li>{skill}</li>
-						{/each}
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<!-- Leadership Skills -->
-		<div>
-			<h3
-				class="text-3xl md:text-4xl font-semibold mt-8 md:mt-16 mb-2 pb-2 bg-gradient-to-r from-green-700 to-green-900 bg-clip-text text-transparent"
-			>
-				leadership
-			</h3>
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-				<div>
-					<ul class="space-y-2 opacity-90">
-						{#each leadership.technical as skill}
-							<li>{skill}</li>
-						{/each}
-					</ul>
-				</div>
-				<div>
-					<ul class="space-y-2 opacity-90">
-						{#each leadership.management as skill}
-							<li>{skill}</li>
-						{/each}
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<!-- Technologies -->
-		<div class="mt-8 md:mt-12">
-			<h3
-				class="text-3xl md:text-4xl font-semibold mb-2 bg-gradient-to-r from-green-700 to-green-900 bg-clip-text text-transparent"
-			>
-				technologies
-			</h3>
-
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-				<!-- Databases -->
-				<div>
-					<ul class="space-y-2">
-						{#each technologies.databases as tech}
-							<li>
-								<a
-									href={tech.url}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="hover:text-green-500 transition-colors duration-200 border border-green-800 dark:border-green-500 rounded-md p-1 text-sm md:text-base min-w-[200px] inline-block text-center"
-								>
-									{tech.name}
-								</a>
-							</li>
-						{/each}
-					</ul>
-				</div>
-
-				<!-- Languages -->
-				<div>
-					<ul class="space-y-2">
-						{#each technologies.languages as tech}
-							<li>
-								<a
-									href={tech.url}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="hover:text-green-500 transition-colors duration-200 border border-green-800 dark:border-green-500 rounded-md p-1 text-sm md:text-base min-w-[200px] inline-block text-center"
-								>
-									{tech.name}
-								</a>
-							</li>
-						{/each}
-					</ul>
-				</div>
-
-				<!-- Frameworks -->
-				<div>
-					<ul class="space-y-2">
-						{#each technologies.frameworks as tech}
-							<li>
-								<a
-									href={tech.url}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="hover:text-green-500 transition-colors duration-200 border border-green-800 dark:border-green-500 rounded-md p-1 text-sm md:text-base min-w-[200px] inline-block text-center"
-								>
-									{tech.name}
-								</a>
-							</li>
-						{/each}
-					</ul>
-				</div>
-
-				<!-- Infrastructure -->
-				<div>
-					<ul class="space-y-2">
-						{#each technologies.infrastructure as tech}
-							<li>
-								<a
-									href={tech.url}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="hover:text-green-500 transition-colors duration-200 border border-green-800 dark:border-green-500 rounded-md p-1 text-sm md:text-base min-w-[200px] inline-block text-center"
-								>
-									{tech.name}
-								</a>
-							</li>
-						{/each}
-					</ul>
-				</div>
-			</div>
 		</div>
 	</div>
 </section>

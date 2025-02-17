@@ -11,6 +11,7 @@
 	import Header from '$lib/components/layout/Header.svelte';
 	import About from '$lib/components/sections/About.svelte';
 	import Experience from '$lib/components/sections/Experience.svelte';
+	import Skills from '$lib/components/sections/Skills.svelte';
 	import Education from '$lib/components/sections/Education.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 
@@ -103,6 +104,7 @@
 		<main>
 			<About isVisible={!isTransitioning} onToggleContactBox={toggleContactBox} />
 			<Experience isVisible={!isTransitioning} />
+			<Skills isVisible={!isTransitioning} />
 			<Education isVisible={!isTransitioning} />
 		</main>
 
@@ -124,7 +126,6 @@
 <style>
 	:global(html) {
 		scroll-behavior: smooth;
-		background-color: #f5f5f5;
 	}
 
 	:global(html),

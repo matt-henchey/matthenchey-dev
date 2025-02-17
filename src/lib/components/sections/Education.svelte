@@ -5,7 +5,7 @@
 	export let isVisible: boolean;
 </script>
 
-<section id="education" class="py-40 px-6">
+<section id="education" class="pt-16 pb-10 px-4 md:px-6">
 	<div
 		class="max-w-4xl mx-auto opacity-0 transition-all duration-1000 delay-400"
 		class:opacity-100={isVisible}

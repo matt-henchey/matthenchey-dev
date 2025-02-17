@@ -5,7 +5,7 @@
 	export let isVisible: boolean;
 </script>
 
-<section id="experience" class="py-12 md:py-20 px-4 md:px-6">
+<section id="experience" class="pt-16 pb-10 px-4 md:px-6">
 	<div
 		class="max-w-4xl mx-auto opacity-0 transition-all duration-1000 delay-400"
 		class:opacity-100={isVisible}
@@ -17,7 +17,7 @@
 			> experience
 		</h2>
 		<!-- Experience Section -->
-		<div class="space-y-8 md:space-y-12">
+		<div class="space-y-12 md:space-y-16">
 			{#each experiences as experience}
 				<div
 					class="border-l-2 pl-4 md:pl-6
@@ -42,7 +42,7 @@
 						</a>
 					</div>
 					<p class="text-base md:text-lg opacity-80 mb-2">{experience.period}</p>
-					<ul class="list-disc list-inside space-y-2 opacity-90 text-sm md:text-base pl-2 md:pl-4">
+					<ul class="list-disc list-inside space-y-4 opacity-90 text-sm md:text-base pl-2 md:pl-4">
 						{#each experience.responsibilities as responsibility}
 							<li class="leading-relaxed">{responsibility}</li>
 						{/each}
