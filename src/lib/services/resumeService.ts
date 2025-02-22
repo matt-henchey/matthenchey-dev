@@ -13,11 +13,16 @@ export enum ResumeFormat {
 
 export const downloadResume = async (format: ResumeFormat) => {
     if (format === ResumeFormat.DOCX) {
-        if (typeof window === 'undefined') {
-            console.error('DOCX generation is only available in the browser');
-            return;
+        try {
+            // Import buffer polyfill first if needed
+            if (typeof window !== 'undefined' && !window.Buffer) {
+                window.Buffer = (await import('buffer')).Buffer;
+            }
+            const docx = await import('docx');
+            // ... rest of DOCX generation code
+        } catch (error) {
+            console.error('Error generating DOCX:', error);
         }
-        const { Document, Paragraph, TextRun, HeadingLevel, Packer, Table, TableRow, TableCell, TableBorders, WidthType } = await import('docx');
     }
     switch (format) {
         case ResumeFormat.MARKDOWN:
