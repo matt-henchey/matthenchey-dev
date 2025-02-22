@@ -8,7 +8,7 @@ export const experiences: ExperienceEntry[] = [
         period: "2023 - Present",
         responsibilities: [
             "Developed backend services for database re-platforming from MongoDB to CockroachDB",
-            "Built and maintainedscalable data migration pipelines using Golang and TypeScript",
+            "Built and maintained scalable data migration pipelines using Golang and TypeScript",
             "Designed and implemented distributed systems using Redis, Docker, and Kubernetes",
             "Developed robust data validation and transformation services for ensuring data integrity",
             "Created automated testing frameworks for complex data migration scenarios"

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { skillsData } from '$lib/data/skills';
+	import { theme } from '$lib/stores/theme';
 	const { skills } = skillsData;
 
 	export let isVisible: boolean;
@@ -13,24 +14,35 @@
 		<!-- Skills Section -->
 		<!-- Header -->
 		<div class="flex">
-			<h1 class="text-3xl md:text-5xl font-bold mb-6 md:mb-8 text-gradient-primary">
+			<h1
+				class="text-3xl md:text-5xl font-bold mb-6 md:mb-8 text-gradient-primary dark:text-gradient-primary-dark"
+			>
 				> technical experience
 			</h1>
 		</div>
 		<!-- Engineering Skills -->
 		<!-- Technologies -->
 		<div>
-			<h2 class="text-xl md:text-2xl font-semibold text-gradient-secondary mb-4">.technologies</h2>
+			<h2
+				class="text-xl md:text-2xl font-semibold text-gradient-secondary dark:text-gradient-secondary-dark mb-4"
+			>
+				# technologies
+			</h2>
 
 			<div
-				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 pb-4 border-b-2 border-[var(--color-yellow-500)]"
+				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 pb-4 border-b-2 border-[var(--color-yellow-400)]"
 			>
 				<!-- Databases -->
 				<div>
 					<ul class="space-y-2">
 						{#each skills.technologies.databases as tech}
 							<li>
-								<a href={tech.url} target="_blank" rel="noopener noreferrer" class="btn-primary">
+								<a
+									href={tech.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class={`btn-primary ${$theme === 'dark' ? 'btn-primary-dark' : 'btn-primary'}`}
+								>
 									{tech.name}
 								</a>
 							</li>
@@ -43,7 +55,12 @@
 					<ul class="space-y-2">
 						{#each skills.technologies.languages as tech}
 							<li>
-								<a href={tech.url} target="_blank" rel="noopener noreferrer" class="btn-primary">
+								<a
+									href={tech.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class={`btn-primary ${$theme === 'dark' ? 'btn-primary-dark' : 'btn-primary'}`}
+								>
 									{tech.name}
 								</a>
 							</li>
@@ -56,7 +73,12 @@
 					<ul class="space-y-2">
 						{#each skills.technologies.frameworks as tech}
 							<li>
-								<a href={tech.url} target="_blank" rel="noopener noreferrer" class="btn-primary">
+								<a
+									href={tech.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class={`btn-primary ${$theme === 'dark' ? 'btn-primary-dark' : 'btn-primary'}`}
+								>
 									{tech.name}
 								</a>
 							</li>
@@ -69,7 +91,12 @@
 					<ul class="space-y-2">
 						{#each skills.technologies.infrastructure as tech}
 							<li>
-								<a href={tech.url} target="_blank" rel="noopener noreferrer" class="btn-primary">
+								<a
+									href={tech.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class={`btn-primary ${$theme === 'dark' ? 'btn-primary-dark' : 'btn-primary'}`}
+								>
 									{tech.name}
 								</a>
 							</li>
@@ -81,10 +108,10 @@
 		<!-- Engineering Skills -->
 		<div>
 			<h2 class="text-xl md:text-2xl font-semibold text-gradient-secondary mb-4 mt-8">
-				.engineering
+				# engineering
 			</h2>
 			<div
-				class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 pb-4 border-b-2 border-[var(--color-yellow-500)]"
+				class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 pb-4 border-b-2 border-[var(--color-yellow-400)]"
 			>
 				<div>
 					<ul class="space-y-4 opacity-90">
@@ -112,7 +139,7 @@
 		<!-- Leadership Skills -->
 		<div>
 			<h2 class="text-xl md:text-2xl font-semibold text-gradient-secondary mb-4 mt-8">
-				.leadership
+				# leadership
 			</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
 				<div>

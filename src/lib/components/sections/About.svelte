@@ -1,10 +1,14 @@
 <script lang="ts">
 	import type { AboutSectionProps } from '$lib/types';
 	import { aboutData } from '$lib/data/about';
+	import { theme } from '$lib/stores/theme';
+	import { ResumeFormat, downloadResume } from '$lib/services/resumeService';
+	import ResumeDownloadButton from '$lib/components/ui/ResumeDownloadButton.svelte';
 	const { description } = aboutData;
 
 	export let onToggleContactBox: () => void;
 	export let isVisible: boolean;
+	let isDropdownOpen = false;
 </script>
 
 <section id="about" class="pt-16 pb-10 px-4 md:px-6">
@@ -23,12 +27,12 @@
 			<!-- Title -->
 			<div class="flex flex-col -space-y-2 md:-space-y-8 text-center md:text-left">
 				<h1
-					class="text-5xl md:text-9xl font-bold tracking-tighter text-gradient-primary leading-tighter items-center justify-center pb-1"
+					class="text-5xl md:text-9xl font-bold tracking-tighter text-gradient-header leading-tighter items-center justify-center pb-1"
 				>
 					software
 				</h1>
 				<h1
-					class="text-5xl md:text-9xl font-bold tracking-tighter text-gradient-primary leading-tighter pb-4 items-center justify-center"
+					class="text-5xl md:text-9xl font-bold tracking-tighter text-gradient-header leading-tighter pb-4 items-center justify-center"
 				>
 					engineer
 				</h1>
@@ -41,9 +45,13 @@
 				<h1 class="text-2xl font-bold text-gradient-secondary">Matt Henchey =></h1>
 				<!-- Contact Button -->
 				<div class="p-2">
-					<button on:click={onToggleContactBox} class="btn-primary">
+					<button
+						on:click={onToggleContactBox}
+						class={`btn-primary ${$theme === 'dark' ? 'btn-primary-dark' : 'btn-primary'}`}
+					>
 						<span class="relative z-10"> send a message </span>
 					</button>
+					<ResumeDownloadButton />
 				</div>
 			</div>
 		</div>
