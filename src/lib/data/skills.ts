@@ -46,11 +46,11 @@ export const skillsData = {
                 { name: "Sqlite", url: "https://www.sqlite.org/" },
                 { name: "MySQL", url: "https://www.mysql.com/" },
                 { name: "MongoDB", url: "https://www.mongodb.com/" },
-                { name: "Microsoft SQL Server", url: "https://www.microsoft.com/en-us/sql-server" }
+                { name: "MS SQL Server", url: "https://www.microsoft.com/en-us/sql-server" }
             ],
             languages: [
                 { name: "Golang", url: "https://golang.org/" },
-                { name: "Javascript/Typescript", url: "https://www.typescriptlang.org/" },
+                { name: "Typescript", url: "https://www.typescriptlang.org/" },
                 { name: "Python", url: "https://www.python.org/" },
                 { name: "C#", url: "https://docs.microsoft.com/en-us/dotnet/csharp/" },
                 { name: "C++", url: "https://isocpp.org/" },
@@ -67,7 +67,8 @@ export const skillsData = {
                 { name: "Docker", url: "https://www.docker.com/" },
                 { name: "Kubernetes", url: "https://kubernetes.io/" },
                 { name: "AWS", url: "https://aws.amazon.com/" },
-                { name: "Prometheus", url: "https://prometheus.io/" }
+                { name: "Prometheus", url: "https://prometheus.io/" },
+                { name: "Cloudflare", url: "https://www.cloudflare.com/" }
             ]
         }
     }

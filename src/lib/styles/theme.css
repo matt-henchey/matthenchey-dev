@@ -1,18 +1,160 @@
 :root {
-    --bg-light: #f0fdf4;
-    --bg-dark: #0C0C0C;
-    --text-light: #050D09;
-    --text-dark: #0C0C0C;
-  }
+  /* Core colors */
+  --color-black: #111111;
+  --color-dark-gray-900: #1A1A1A;
+  --color-dark-gray-800: #262626;
+  --color-dark-gray-700: #333333;
+  --color-dark-gray-600: #404040;
+  --color-dark-gray-500: #4D4D4D;
+  --color-dark-gray-400: #595959;
+  --color-dark-gray-300: #666666;
+  --color-dark-gray-200: #737373;
+  --color-dark-gray-100: #808080;
+  --color-dark-gray-50: #8D8D8D;
+  --color-dark-gray-25: #999999;
+  --color-dark-gray-10: #A6A6A6;
+  --color-dark-gray-5: #B3B3B3;
+  --color-dark-gray-2: #C0C0C0;
+  --color-dark-gray-1: #CDCDCD;
+  --color-white: #F5F5F5;
   
-  /* Apply variables directly in dark mode */
-  .dark {
-    --bg: var(--bg-dark);
-    --text: var(--text-dark);
+  /* Green palette */
+  --color-green-100: #EBFFD4;  /* Lightest green */
+  --color-green-200: #C8FF8C;
+  --color-green-300: #90E601;  /* Your primary green */
+  --color-green-400: #7AC000;
+  --color-green-500: #507A00;  /* Darker green */
+  --color-green-600: #1B2E00;  /* Darkest green */
+
+  /* Yellow complement palette */
+  --color-yellow-100: #FFF8D4;  /* Lightest yellow */
+  --color-yellow-200: #FFE88C;
+  --color-yellow-300: #FFD101;  /* Primary yellow */
+  --color-yellow-400: #D4AC00;
+  --color-yellow-500: #8C7200;  /* Darker yellow */
+  --color-yellow-600: #332900;  /* Darkest yellow */
+
+  /* Light mode */
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-green-100);
+  --text-primary: var(--color-black);
+  --text-secondary: var(--color-green-600);
+  --accent-primary: var(--color-green-300);
+  --accent-secondary: var(--color-yellow-300);
+  --header-text: var(--color-green-500);
+  --border-color: var(--color-black);
+
+  /* Button specific variables */
+  --button-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  --button-shadow-active: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+
+  /* gradients */
+  --gradient-text-header: linear-gradient(
+    to right, 
+    var(--color-green-100), 
+    var(--color-green-600)
+  );
+  --gradient-text-primary: linear-gradient(
+    to right, 
+    var(--color-dark-gray-100), 
+    var(--color-dark-gray-800)
+  );
+  --gradient-text-secondary: linear-gradient(
+    to right, 
+    var(--color-yellow-400), 
+    var(--color-yellow-500)
+  );
+
+  /* button specific variables */
+  --button-text: var(--color-yellow-200);
+  --button-bg: var(--color-dark-gray-900);
+  --button-border: var(--color-dark-gray-600);
+  --button-hover-bg: var(--color-black);
+  --button-hover-text: var(--color-yellow-300);
+  --button-active-border: var(--color-dark-gray-800);
+}
+
+.header-mesh {
+  background: var(--gradient-mesh);
+  min-height:200px;
+}
+
+.text-gradient-primary {
+  background: var(--gradient-text-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-secondary {
+  background: var(--gradient-text-secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-primary {
+  font-size: 1rem;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  min-width: 200px;
+  display: inline-block;
+  text-align: center;
+  transition: all 100ms;
+  position: relative;
+}
+
+/* media query for md breakpoint */
+@media (min-width: 768px) {
+  .btn-primary {
+    font-size: 1rem;
   }
-  
-  /* Light mode defaults */
-  :root {
-    --bg: var(--bg-light);
-    --text: var(--text-light);
-  }
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  border-color: var(--button-active-border);
+}
+
+/* Fade effect */
+.btn-primary.fade-button {
+  position: relative;
+}
+
+.btn-primary.fade-button::after {
+  content: '';
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--button-hover-bg) 30%,
+    transparent 50%,
+    var(--button-hover-bg) 70%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary.fade-button:hover::after {
+  opacity: 1;
+}
+
+/* Base styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}

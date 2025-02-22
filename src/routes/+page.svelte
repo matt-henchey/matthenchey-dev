@@ -5,6 +5,7 @@
 
 	// UI Components
 	import ThemeToggle from '$lib/components/ui/ThemeToggle.svelte';
+	import HamburgerMenu from '$lib/components/ui/HamburgerMenu.svelte';
 	import ContactBox from '$lib/components/ui/ContactBox.svelte';
 
 	// Section Components
@@ -100,6 +101,7 @@
 	>
 		<Header isVisible={true}>
 			<ThemeToggle slot="theme-toggle" />
+			<HamburgerMenu slot="hamburger-menu" />
 		</Header>
 		<main>
 			<About isVisible={!isTransitioning} onToggleContactBox={toggleContactBox} />
