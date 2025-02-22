@@ -12,6 +12,13 @@ export enum ResumeFormat {
 }
 
 export const downloadResume = async (format: ResumeFormat) => {
+    if (format === ResumeFormat.DOCX) {
+        if (typeof window === 'undefined') {
+            console.error('DOCX generation is only available in the browser');
+            return;
+        }
+        const { Document, Paragraph, TextRun, HeadingLevel, Packer, Table, TableRow, TableCell, TableBorders, WidthType } = await import('docx');
+    }
     switch (format) {
         case ResumeFormat.MARKDOWN:
             await generateMarkdownResume();
