@@ -33,7 +33,7 @@
 						>
 							{experience.title}
 						</h2>
-						<h2 class="text-2xl text-gradient-secondary">=></h2>
+						<h2 class="text-2xl text-gradient-secondary rotate-180">⬅</h2>
 						<button
 							on:click={() => window.open(experience.companyUrl, '_blank')}
 							class="btn-primary"

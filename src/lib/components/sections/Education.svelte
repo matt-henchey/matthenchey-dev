@@ -15,10 +15,13 @@
 		</div>
 
 		{#each education as entry}
-			<div class="border-l-2 pl-6 border-[var(--color-green-500)] border-opacity-20">
-				<h3 class="text-2xl font-semibold text-gradient-secondary">
-					{entry.degree}
-				</h3>
+			<div class="border-l-2 pl-6 border-[var(--color-dark-gray-800)] border-opacity-20 rounded-lg">
+				<div class="flex">
+					<h1 class="text-2xl font-semibold text-gradient-secondary">
+						{entry.degree}
+					</h1>
+				</div>
+
 				<p class="text-lg opacity-80 mb-2">{entry.school} • {entry.period}</p>
 				<p class="text-lg opacity-90">{entry.description}</p>
 			</div>

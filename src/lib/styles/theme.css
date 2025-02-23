@@ -1,4 +1,74 @@
 :root {
+   /* Base theme colors - input hex codes here */
+  /*
+   --primary-color-light: #90E601;
+   --secondary-color-light: #8C1B1B;
+   --accent-color-light: #591623;
+   --heavy-color-light: #401A21;
+   --neutral-color-light: #331318;
+
+   --primary-color-dark: #8C1F28;
+   --secondary-color-dark: #8C1B1B;
+   --accent-color-dark: #591623;
+   --heavy-color-dark: #401A21;
+   --neutral-color-dark: #262626;
+ 
+   --primary-hsl-light: lch(from var(--primary-color-light) h s l);
+   --secondary-hsl-light: lch(from var(--accent-color-light) h s l);
+   --accent-hsl-light: lch(from var(--accent-color-light) h s l);
+   --heavy-hsl-light: lch(from var(--accent-heavy-color-light) h s l);
+   --neutral-hsl-light: lch(from var(--neutral-color-light) h s l);
+
+   --primary-hsl-dark: lch(from var(--primary-color-dark) h s l);
+   --secondary-hsl-dark: lch(from var(--accent-color-dark) h s l);
+   --accent-hsl-dark: lch(from var(--accent-color-dark) h s l);
+   --heavy-hsl-dark: lch(from var(--accent-heavy-color-dark) h s l);
+   --neutral-hsl-dark: lch(from var(--neutral-color-dark) h s l);
+ 
+   --color-dark-primary-100: color-mix(in srgb, var(--primary-color-dark) 15%, white);
+   --color-dark-primary-200: color-mix(in srgb, var(--primary-color-dark) 40%, white);
+   --color-dark-primary-300: var(--primary-color-dark);
+   --color-dark-primary-400: color-mix(in srgb, var(--primary-color-dark) 70%, black);
+   --color-dark-primary-500: color-mix(in srgb, var(--primary-color-dark) 40%, black);
+   --color-dark-primary-600: color-mix(in srgb, var(--primary-color-dark) 20%, black);
+ 
+   --color-dark-accent-100: color-mix(in srgb, var(--accent-color-dark) 15%, white);
+   --color-dark-accent-200: color-mix(in srgb, var(--accent-color-dark) 40%, white);
+   --color-dark-accent-300: var(--accent-color-dark);
+   --color-dark-accent-400: color-mix(in srgb, var(--accent-color-dark) 70%, black);
+   --color-dark-accent-500: color-mix(in srgb, var(--accent-color-dark) 40%, black);
+   --color-dark-accent-600: color-mix(in srgb, var(--accent-color-dark) 20%, black);
+ 
+   --color-neutral-100: color-mix(in srgb, var(--primary-color-dark) 5%, white);
+   --color-neutral-200: color-mix(in srgb, var(--primary-color-dark) 15%, rgb(128, 128, 128));
+   --color-neutral-300: color-mix(in srgb, var(--primary-color-dark) 25%, rgb(128, 128, 128));
+   --color-neutral-400: color-mix(in srgb, var(--primary-color-dark) 35%, rgb(128, 128, 128));
+   --color-neutral-500: color-mix(in srgb, var(--primary-color-dark) 45%, rgb(128, 128, 128));
+   --color-neutral-600: color-mix(in srgb, var(--primary-color-dark) 55%, rgb(128, 128, 128));
+   --color-neutral-700: color-mix(in srgb, var(--primary-color-dark) 65%, rgb(64, 64, 64));
+   --color-neutral-800: color-mix(in srgb, var(--primary-color-dark) 75%, rgb(32, 32, 32));
+   --color-neutral-900: color-mix(in srgb, var(--primary-color-dark) 85%, rgb(16, 16, 16));
+ 
+   --color-black: #111111;
+   --color-white: #F5F5F5;
+
+   --bg-primary: var(--color-white);
+   --bg-secondary: var(--color-primary-100);
+
+   --text-primary: var(--color-black);
+   --text-secondary: var(--color-primary-600);
+
+   --accent-primary: var(--color-primary-300);
+   --accent-secondary: var(--color-accent-300);
+
+   --header-text: var(--color-primary-500);
+   
+   --border-color: var(--color-black);
+  
+  */
+  
+  
+  
   /* Core colors */
   --color-black: #111111;
   --color-dark-gray-900: #1A1A1A;
@@ -34,6 +104,14 @@
   --color-yellow-500: #8C7200;  /* Darker yellow */
   --color-yellow-600: #332900;  /* Darkest yellow */
 
+  /* Red palette */
+  --color-red-100: #FFE5E3;  /* Lightest - soft pink */
+  --color-red-200: #FF9D96;  /* Light coral */
+  --color-red-300: #E64A40;  /* Bright red */
+  --color-red-400: #B31C0E;  /* Base red - unchanged */
+  --color-red-500: #8A1509;  /* Darker red */
+  --color-red-600: #610C06;  /* Darkest - deep red */
+
   /* Light mode */
   --bg-primary: var(--color-white);
   --bg-secondary: var(--color-green-100);
@@ -51,9 +129,9 @@
   /* gradients */
   --gradient-text-header: linear-gradient(
     to right, 
-    var(--color-yellow-300),
-    var(--color-yellow-400),
-    var(--color-yellow-600)
+    var(--color-red-400),
+    var(--color-red-500),
+    var(--color-red-600)
   );
 
   --gradient-text-header-dark: linear-gradient(
@@ -81,10 +159,8 @@
   
   --gradient-text-secondary: linear-gradient(
     to right, 
-    var(--color-yellow-400),
-    var(--color-yellow-300),
-    var(--color-yellow-200),
-    var(--color-yellow-300)
+    var(--color-red-300),
+    var(--color-red-400)
   );
 
   --gradient-text-secondary-dark: linear-gradient(
@@ -103,7 +179,7 @@
   --button-border: var(--color-dark-gray-500);
   --button-border-dark: var(--color-dark-gray-600);
 
-  --button-hover-bg: var(--color-yellow-200);
+  --button-hover-bg: var(--color-red-100);
   --button-hover-bg-dark: var(--color-black);
 
   --button-hover-text: var(--color-black);

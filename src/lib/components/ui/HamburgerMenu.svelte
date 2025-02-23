@@ -6,7 +6,7 @@
 	on:click={() => {
 		toggleHamburgerMenu();
 	}}
-	class="transition-all duration-200 hover:scale-110 hover:rotate-45 bg-transparent text-[var(--color-yellow-500)] hover:text-[var(--color-yellow-700)] dark:text-[var(--color-yellow-400)] dark:hover:text-[var(--color-yellow-200)]"
+	class="transition-all duration-200 hover:scale-110 hover:rotate-45 bg-transparent text-[var(--color-red-400)] hover:text-[var(--color-red-300)] dark:text-[var(--color-red-400)] dark:hover:text-[var(--color-red-300)]"
 	aria-label="Hamburger menu"
 >
 	{#if $theme === 'dark'}

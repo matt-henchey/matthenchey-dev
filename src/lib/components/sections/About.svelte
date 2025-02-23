@@ -42,7 +42,8 @@
 		<!-- Name and Contact Button -->
 		<div class="text-lg space-y-2 mb-8">
 			<div class="flex flex-col md:flex-row items-center gap-2 mb-1">
-				<h1 class="text-2xl font-bold text-gradient-secondary">Matt Henchey =></h1>
+				<h1 class="text-2xl font-bold text-gradient-secondary">Matt Henchey</h1>
+				<h1 class="text-2xl font-bold text-gradient-secondary rotate-180">⬅</h1>
 				<!-- Contact Button -->
 				<div class="p-2">
 					<button

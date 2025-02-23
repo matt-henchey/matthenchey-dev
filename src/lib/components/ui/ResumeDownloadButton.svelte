@@ -27,7 +27,7 @@
 			tabindex="-1"
 		>
 			<button
-				class="block px-4 py-2
+				class="block px-4 py-2 text-sm
                 text-[var(--color-dark-gray-700)]
                 dark:text-[var(--color-dark-gray-200)]
                 hover:text-[var(--color-dark-gray-900)]
@@ -41,7 +41,7 @@
 				markdown (.md)
 			</button>
 			<button
-				class="block px-4 py-2
+				class="block px-4 py-2 text-sm
                 text-[var(--color-dark-gray-700)]
                 dark:text-[var(--color-dark-gray-200)]
                 hover:text-[var(--color-dark-gray-900)]
@@ -55,7 +55,7 @@
 				plain text (.txt)
 			</button>
 			<button
-				class="block px-4 py-2
+				class="block px-4 py-2 text-sm
                 text-[var(--color-dark-gray-700)]
                 dark:text-[var(--color-dark-gray-200)]
                 hover:text-[var(--color-dark-gray-900)]

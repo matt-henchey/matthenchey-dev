@@ -23,14 +23,16 @@
 		<!-- Engineering Skills -->
 		<!-- Technologies -->
 		<div>
-			<h2
-				class="text-xl md:text-2xl font-semibold text-gradient-secondary dark:text-gradient-secondary-dark mb-4"
-			>
-				# technologies
-			</h2>
+			<div class="flex">
+				<h2
+					class="text-xl md:text-2xl font-semibold text-gradient-secondary dark:text-gradient-secondary-dark mb-4"
+				>
+					# technologies
+				</h2>
+			</div>
 
 			<div
-				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 pb-4 border-b-2 border-[var(--color-yellow-400)]"
+				class="flex grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 pb-4 border-b-2 border-[var(--color-dark-gray-800)]"
 			>
 				<!-- Databases -->
 				<div>
@@ -107,11 +109,13 @@
 		</div>
 		<!-- Engineering Skills -->
 		<div>
-			<h2 class="text-xl md:text-2xl font-semibold text-gradient-secondary mb-4 mt-8">
-				# engineering
-			</h2>
+			<div class="flex">
+				<h2 class="text-xl md:text-2xl font-semibold text-gradient-secondary mb-4 mt-8">
+					# engineering
+				</h2>
+			</div>
 			<div
-				class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 pb-4 border-b-2 border-[var(--color-yellow-400)]"
+				class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 pb-4 border-b-2 border-[var(--color-dark-gray-800)]"
 			>
 				<div>
 					<ul class="space-y-4 opacity-90">
@@ -138,9 +142,12 @@
 		</div>
 		<!-- Leadership Skills -->
 		<div>
-			<h2 class="text-xl md:text-2xl font-semibold text-gradient-secondary mb-4 mt-8">
-				# leadership
-			</h2>
+			<div class="flex">
+				<h2 class="text-xl md:text-2xl font-semibold text-gradient-secondary mb-4 mt-8">
+					# leadership
+				</h2>
+			</div>
+
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
 				<div>
 					<ul class="space-y-4 opacity-90">
